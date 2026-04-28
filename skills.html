@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Skills</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About Me</a>
+<a href="projects.html">Projects</a>
+<a href="skills.html">Skills</a>
+<a href="resume.html">Resume</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<main>
+<img src="images/coding.jpg" width="300">
+
+<h2>Skills</h2>
+
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Cybersecurity</li>
+</ul>
+
+<h2>Skill Levels</h2>
+<div id="skillsTable"></div>
+
+</main>
+
+<footer>
+<p>© 2025 Tyson Williams</p>
+</footer>
+
+<script>
+function makeTable(){
+    let skills = [
+        ["HTML","Good"],
+        ["CSS","Good"],
+        ["JS","Basic"],
+        ["Cybersecurity","Learning"]
+    ];
+
+    let t = "<table border='1'>";
+
+    for(let i=0;i<skills.length;i++){
+        t += "<tr><td>"+skills[i][0]+"</td><td>"+skills[i][1]+"</td></tr>";
+    }
+
+    t += "</table>";
+
+    document.getElementById("skillsTable").innerHTML = t;
+}
+
+makeTable();
+</script>
+
+</body>
+</html>

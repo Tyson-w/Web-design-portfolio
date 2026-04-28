@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>About Me</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About Me</a>
+<a href="projects.html">Projects</a>
+<a href="skills.html">Skills</a>
+<a href="resume.html">Resume</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<main>
+<img src="images/Profile.jpeg" width="200">
+
+<p>I study IT with a focus on cybersecurity.</p>
+
+<h2>Contact Form</h2>
+
+<form id="form">
+<input type="text" id="name" placeholder="Name" required>
+<input type="email" id="email" placeholder="Email" required>
+<textarea id="msg" placeholder="Message" required></textarea>
+<button type="submit">Send</button>
+</form>
+
+<h2>Skills Table</h2>
+<div id="table"></div>
+
+</main>
+
+<footer>
+<p>© 2025 Tyson Williams</p>
+</footer>
+
+<script>
+// form popup
+document.getElementById("form").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Message Sent!");
+    this.reset();
+});
+
+// JS table
+function buildTable(){
+    let skills = ["HTML","CSS","JavaScript","Cybersecurity"];
+
+    let output = "<table border='1'>";
+    output += "<tr><th>Skill</th></tr>";
+
+    for(let i=0;i<skills.length;i++){
+        output += "<tr><td>"+skills[i]+"</td></tr>";
+    }
+
+    output += "</table>";
+
+    document.getElementById("table").innerHTML = output;
+}
+
+buildTable();
+</script>
+
+</body>
+</html>
